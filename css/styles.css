@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+main {
+  background-color: #f7daa5;
+  color: #000;
+  padding: 1em;
+  display: flex;
+  gap: 8px;
+  flex-flow: row wrap;
+  text-align: center;
+}
+
+header {
+  background-color: #ce7373;
+  color: #fff;
+  font-family: Helvetica, sans-serif;
+  font-style: normal;
+}
+
+.content1 {
+  color: #000;
+  padding: 1em;
+}
+
+.footer {
+  background-color: #ce7373;
+  color: #fff;
+  font-family: Helvetica, sans-serif;
+  font-style: normal;
+}/*# sourceMappingURL=styles.css.map */
