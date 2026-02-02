@@ -14,13 +14,42 @@ p {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+h3 {
+  position: relative;
+  z-index: 1;
+}
+
+h3 span {
+  position: relative;
+  z-index: 2;
+  background-color: #f7daa5;
+  padding-right: 1em;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: #000;
+  margin: 16px 0;
+}
+
+h3:before {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: #000;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: 1;
+}
+
 main {
   background-color: #f7daa5;
   color: #000;
   display: flex;
-  gap: 16px;
+  gap: 32px;
   flex-flow: row wrap;
-  text-align: center;
 }
 
 header {
@@ -33,6 +62,11 @@ header {
   height: 15%;
   align-items: center;
   padding: 24px;
+}
+
+.main-content {
+  border-top: 4px solid black;
+  padding-top: 1em;
 }
 
 .HT {
@@ -66,7 +100,7 @@ header {
   flex-direction: row wrap;
   justify-content: space-between;
   width: 100%;
-  line-height: 1;
+  border-bottom: 4px solid black;
 }
 
 .PA {
@@ -86,6 +120,7 @@ header {
   display: flex;
   width: 100%;
   text-align: center;
+  padding-bottom: 2em;
 }
 
 .all-content {
@@ -99,35 +134,89 @@ header {
   padding: 1em;
 }
 
-.c1-1 {
-  text-align: left;
-}
-
-.c1-2 {
+.content-item:nth-child(even) {
   text-align: right;
 }
 
-.c1-3 {
-  text-align: left;
+.content-item:nth-child(even) h3 span {
+  padding-right: 0;
+  padding-left: 1em;
 }
 
 .content2 {
   color: #000;
   padding: 1em;
   text-align: center;
+  border-top: 4px solid black;
+  padding-top: 2em;
 }
 
 .cards {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  flex-flow: row wrap;
   flex: 1 0 0;
+  align-items: center;
+  color: #fff;
+  padding: 1em;
+  gap: 1em;
+  border-style: 2;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 2em;
+}
+.cards p,
+.cards li {
+  color: #000;
+}
+
+.top-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.bottom-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.info1,
+.info2,
+.info3,
+.info4,
+.info5,
+.info6,
+.info7,
+.info8 {
+  text-align: center;
+  background-color: #ce7373;
+  padding: 1em;
+  width: 25%;
+  border-radius: 1em;
+  height: 18em;
 }
 
 .content3 {
   color: #000;
   padding: 1em;
   text-align: center;
+  border-top: 4px solid black;
+  padding-top: 2em;
+}
+
+.questions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}
+
+.qrow {
+  display: flex;
+  gap: 1em;
+  flex: 0 0 calc(50% - 0.5em);
 }
 
 footer {
