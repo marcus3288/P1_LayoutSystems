@@ -22,22 +22,18 @@ h3 {
 h3 span {
   position: relative;
   z-index: 2;
-  background-color: #f7daa5;
-  padding-right: 1em;
+  background-color: #305a61;
 }
 
-hr {
-  border: none;
-  height: 2px;
-  background-color: #000;
-  margin: 16px 0;
+.content-item:nth-child(odd) h3 span {
+  padding-inline: 0 1em;
 }
 
 h3:before {
   content: "";
   height: 2px;
   width: 100%;
-  background: #000;
+  background: #fff;
   position: absolute;
   left: 0;
   top: 50%;
@@ -45,15 +41,16 @@ h3:before {
 }
 
 main {
-  background-color: #f7daa5;
-  color: #000;
+  background-color: #305a61;
+  color: #fff;
   display: flex;
   gap: 32px;
   flex-flow: row wrap;
+  padding: 16px;
 }
 
 header {
-  background-color: #ce7373;
+  background-color: #288fa1;
   color: #fff;
   font-family: Helvetica, sans-serif;
   display: flex;
@@ -65,8 +62,7 @@ header {
 }
 
 .main-content {
-  border-top: 4px solid black;
-  padding-top: 1em;
+  padding-top: 2em;
 }
 
 .HT {
@@ -100,7 +96,6 @@ header {
   flex-direction: row wrap;
   justify-content: space-between;
   width: 100%;
-  border-bottom: 4px solid black;
 }
 
 .PA {
@@ -120,7 +115,6 @@ header {
   display: flex;
   width: 100%;
   text-align: center;
-  padding-bottom: 2em;
 }
 
 .all-content {
@@ -130,7 +124,7 @@ header {
 }
 
 .content1 {
-  color: #000;
+  color: #fff;
   padding: 1em;
 }
 
@@ -139,16 +133,17 @@ header {
 }
 
 .content-item:nth-child(even) h3 span {
-  padding-right: 0;
-  padding-left: 1em;
+  padding-inline: 1em 0;
 }
 
 .content2 {
-  color: #000;
-  padding: 1em;
+  color: #fff;
+  padding: 2em;
   text-align: center;
-  border-top: 4px solid black;
-  padding-top: 2em;
+  padding-top: 4em;
+}
+.content2 h3 span {
+  padding-inline: 1em;
 }
 
 .cards {
@@ -158,7 +153,7 @@ header {
   flex: 1 0 0;
   align-items: center;
   color: #fff;
-  padding: 1em;
+  padding: 2em;
   gap: 1em;
   border-style: 2;
   font-family: Arial, Helvetica, sans-serif;
@@ -166,7 +161,7 @@ header {
 }
 .cards p,
 .cards li {
-  color: #000;
+  color: #fff;
 }
 
 .top-row {
@@ -182,27 +177,20 @@ header {
 }
 
 .info1,
-.info2,
-.info3,
-.info4,
-.info5,
-.info6,
-.info7,
-.info8 {
+.info2 {
   text-align: center;
-  background-color: #ce7373;
+  background-color: #288fa1;
   padding: 1em;
   width: 25%;
   border-radius: 1em;
-  height: 18em;
+  height: 20.5em;
 }
 
 .content3 {
-  color: #000;
+  color: #fff;
   padding: 1em;
   text-align: center;
-  border-top: 4px solid black;
-  padding-top: 2em;
+  padding-top: 4em;
 }
 
 .questions {
@@ -211,6 +199,7 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1em;
+  text-align: center;
 }
 
 .qrow {
@@ -220,7 +209,7 @@ header {
 }
 
 footer {
-  background-color: #ce7373;
+  background-color: #288fa1;
   color: #fff;
   font-family: Helvetica, sans-serif;
   display: flex;

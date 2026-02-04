@@ -14,9 +14,9 @@ p {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-$pc: #f7daa5;
-$sc: #ce7373;
-$tc: #000;
+$pc: #305a61;
+$sc: #288fa1;
+$tc: #fff;
 $stc: #fff;
 
 h3 {
@@ -28,7 +28,9 @@ h3 span {
   position: relative;
   z-index: 2;
   background-color: $pc;
-  padding-right: 1em;
+}
+@mixin spacer($padding) {
+  padding-inline: $padding;
 }
 
 @mixin line {
@@ -41,11 +43,9 @@ h3 span {
   top: 50%;
   z-index: 1;
 }
-hr {
-  border: none;
-  height: 2px;
-  background-color: $tc;
-  margin: 16px 0;
+
+.content-item:nth-child(odd) h3 span {
+  @include spacer(0 1em);
 }
 
 h3:before {
@@ -58,6 +58,7 @@ main {
   display: flex;
   gap: 32px;
   flex-flow: row wrap;
+  padding: 16px;
 }
 
 header {
@@ -73,8 +74,7 @@ header {
 }
 
 .main-content {
-  border-top: 4px solid black;
-  padding-top: 1em;
+  padding-top: 2em;
 }
 
 .HT {
@@ -108,7 +108,6 @@ header {
   flex-direction: row wrap;
   justify-content: space-between;
   width: 100%;
-  border-bottom: 4px solid black;
 }
 
 .PA {
@@ -128,7 +127,6 @@ header {
   display: flex;
   width: 100%;
   text-align: center;
-  padding-bottom: 2em;
 }
 
 .all-content {
@@ -147,17 +145,39 @@ header {
 }
 
 .content-item:nth-child(even) h3 span {
-  padding-right: 0;
-  padding-left: 1em;
+  @include spacer(1em 0);
 }
+
+// h3::after {
+//   @include line-centered;
+// }
 
 .content2 {
   color: $tc;
-  padding: 1em;
+  padding: 2em;
   text-align: center;
-  border-top: 4px solid black;
-  padding-top: 2em;
+  padding-top: 4em;
+  h3 span {
+    @include spacer(1em);
+  }
 }
+
+// @mixin line-centered {
+//   content: "";
+//   height: 2px;
+//   width: 100%;
+//   background: $tc;
+//   left: 0;
+//   top: 50%;
+//   z-index: 1;
+//   background-color: red;
+// }
+
+// .center-head h3 span {
+//   @include line-centered;
+//   padding-right: 0;
+//   padding-left: 1em;
+// }
 
 .cards {
   display: flex;
@@ -166,7 +186,7 @@ header {
   flex: 1 0 0;
   align-items: center;
   color: $stc;
-  padding: 1em;
+  padding: 2em;
   gap: 1em;
   border-style: round($number: 2);
   font-family: Arial, Helvetica, sans-serif;
@@ -190,27 +210,20 @@ header {
 }
 
 .info1,
-.info2,
-.info3,
-.info4,
-.info5,
-.info6,
-.info7,
-.info8 {
+.info2 {
   text-align: center;
   background-color: $sc;
   padding: 1em;
   width: 25%;
   border-radius: 1em;
-  height: 18em;
+  height: 20.5em;
 }
 
 .content3 {
   color: $tc;
   padding: 1em;
   text-align: center;
-  border-top: 4px solid black;
-  padding-top: 2em;
+  padding-top: 4em;
 }
 
 .questions {
@@ -219,6 +232,7 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1em;
+  text-align: center;
 }
 
 .qrow {
